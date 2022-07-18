@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <img class="logo" src="./assets/icons/lofi-logo.gif" alt="">
+        </div>
+        <div class="header__icon" >
+            <a target="_blank" rel="noreferrer" href="#"><i class="fab fa-github"></i><span style="margin-left:10px;">GitHub</span></a>
+
+        </div>
+        <div class="header__icon">
+            <div class="header__icon--weather">
+                <input type="checkbox" name="" class="switch">
+                <i class="fa-solid fa-sun iconsun"></i>
+                <i class="fa-solid fa-moon iconmoon"></i>
+            </div>
+            <div class="header__icon--fullscreen">
+                <i class="fa-solid fa-expand"></i>
+            </div>
+
+        </div>
+        <div class="header__icon">
+            <div class="header__icon--logout"><i><i class="fa-solid fa-arrow-right-from-bracket"></i></i><span style="color:#fff;margin-left: 10px;">Log out</span></div>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <video class="background-video bgvideo1-day day-clear" style="opacity: 0;"  src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
+            ></video>
+
+            <video class="background-video bgvideo1-night " style="opacity: 0;" src="./assets/videos/Night-clear.mp4" loop="" autoplay="" muted
+            ></video>
+            <video class="background-video bgvideo1-dayy" style="opacity: 0;" src="./assets/videos/Day-rainny.mp4" loop="" autoplay="" muted
+            ></video>
+            <video class="background-video bgvideo1-nightt" style="opacity: 0;" src="./assets/videos/Night-rainny.mp4" loop="" autoplay="" muted
+            ></video>
+            <!-- <video class="background-video" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
+            ></video> -->
+            <div class="icon--rain-container">
+                <i class="fa-solid fa-cloud-rain"></i>
+            </div>
+            
+    </div>
+
+
+
+
+<!-- <script>
+    const weaTher =document.querySelector(".header__icon--weather");
+// let w=document.getElementsByClassName('switch');
+let quy = document.querySelectorAll('.switch')
+</script> -->
+
+<script src="./assets/js/variable.js"></script>
+<script src="./assets/js/function.js"></script>
+<script src="./assets/js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
