@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <title>Document</title>
+    <title>Chill time</title>
+    <link rel="icon" href="https://png.pngtree.com/element_our/png_detail/20181226/music-note-vector-icon-png_276823.jpg" type="image/x-icon" />
 </head>
 <body>
     <div class="header">
@@ -36,19 +36,41 @@
     </div>
 
     <div class="main">
-        <video class="background-video bgvideo1-day day-clear" style="opacity: 0;"  src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
+        <video class="background-video--sub"   src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
             ></video>
-
-            <video class="background-video bgvideo1-night " style="opacity: 0;" src="./assets/videos/Night-clear.mp4" loop="" autoplay="" muted
+        <video class="background-video"   src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
             ></video>
-            <video class="background-video bgvideo1-dayy" style="opacity: 0;" src="./assets/videos/Day-rainny.mp4" loop="" autoplay="" muted
-            ></video>
-            <video class="background-video bgvideo1-nightt" style="opacity: 0;" src="./assets/videos/Night-rainny.mp4" loop="" autoplay="" muted
-            ></video>
-            <!-- <video class="background-video" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" muted
+            <!-- <video class="background-video"   src="./assets/videos/Day-rainny.mp4" loop="" autoplay="" muted
             ></video> -->
+            
             <div class="icon--rain-container">
                 <i class="fa-solid fa-cloud-rain"></i>
+            </div>
+
+            <div class="taskbar">
+                <div class="taskbar__item" > <i class="fas fa-sliders-h"></i></div>
+                <div class="taskbar__item"><i class="fa-solid fa-music"></i></div>
+                <div class="taskbar__item screen-container" id="screen">
+                     <i class="fas fa-film"></i>
+                    <div class="video-list-board" id="screen-board">
+
+                        <div class="video__item"  style="opacity: 0.5;" id="chillvibes"><img src="./assets/img/chill.6d5d8ab2.png" alt=""></div>
+                        <div class="video__item"  style="opacity: 0.5;" id="bookcafe"><img src="./assets/img/bookcafe.png" alt=""></div>
+                        <div class="video__item"  style="opacity: 0.5;" id="caferoom"><img src="./assets/img/caferoom - Copy.png" alt=""></div>
+                        <div class="video__item"  style="position: relative;">
+                            <img src="./assets/img/dreamin.dedb63ff377310884f0e.png" alt="" style="opacity: 0.5;">
+                            <button style="opacity: 0.5;"><i class="fa-solid fa-crown"></i>Go Premium</button>
+                        </div>
+                        <div class="video__item" style="position: relative;">
+                            <img src="./assets/img/honolulu-pw.f0c9ad995b0ee10fc44f.png" alt="" style="opacity: 0.5;">
+                            <button style="opacity: 0.5;"><i class="fa-solid fa-crown"></i>Go Premium</button>
+                        </div>
+                        <div class="video__item" style="position: relative;">
+                            <img src="./assets/img/kyoto.8e810582a43d59dd3dc8.png" alt="" style="opacity: 0.5;">
+                            <button style="opacity: 0.5;"><i class="fa-solid fa-crown"></i>Go Premium</button>
+                        </div>
+                    </div></div>
+                <div class="taskbar__item"><i class="fa-solid fa-clock"></i></div>
             </div>
             
     </div>
