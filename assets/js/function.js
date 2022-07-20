@@ -1,12 +1,9 @@
 function changeScene() {
     if (checkday === 1 && checkweather === 1) {
-
-        
             bgVideoSub.src = nightClear;
-       
         setTimeout(() => {
             bgVideo.src = nightClear;
-        }, 100);
+        }, 200);
         checkday = 0;
         checkweather = 1;
     }
@@ -14,17 +11,15 @@ function changeScene() {
             bgVideoSub.src = nightRainny;
         setTimeout(() => {
             bgVideo.src = nightRainny;
-        }, 100);
+        }, 200);
         checkday = 0;
         checkweather = 0;
     }
     else if (checkday === 0 && checkweather === 1) {
-
             bgVideoSub.src = dayClear;
-
         setTimeout(() => {
             bgVideo.src = dayClear;
-        }, 100);
+        }, 200);
         checkday = 1;
         checkweather = 1;
     }
@@ -33,7 +28,7 @@ function changeScene() {
 
         setTimeout(() => {
             bgVideo.src = dayRainny;
-        }, 100);
+        }, 200);
         checkday = 1;
         checkweather = 0;
     }
@@ -50,7 +45,7 @@ function changeweaTher() {
             bgVideoSub.src = dayRainny;
         setTimeout(() => {
             bgVideo.src = dayRainny;
-        }, 100);
+        }, 200);
         checkday = 1;
         checkweather = 0;
     }
@@ -60,7 +55,7 @@ function changeweaTher() {
 
         setTimeout(() => {
             bgVideo.src = dayClear;
-        }, 100);
+        }, 200);
         checkday = 1;
         checkweather = 1;
     }
@@ -69,7 +64,7 @@ function changeweaTher() {
             bgVideoSub.src = nightRainny;
         setTimeout(() => {
             bgVideo.src = nightRainny;
-        }, 100);
+        }, 200);
         checkweather = 0;
     }
     else if (checkweather === 0 && checkday === 0) {
@@ -77,7 +72,7 @@ function changeweaTher() {
             bgVideoSub.src = nightClear;
         setTimeout(() => {
             bgVideo.src = nightClear;
-        }, 100);
+        }, 200);
         checkday = 0;
         checkweather = 1;
 
@@ -110,10 +105,30 @@ function checksreenhightlight(){
 }
 function updatescreen()
 {
-    if(checkweather === 1 && checkday === 1) {bgVideo.src = dayClear;}
-    if(checkweather === 0 && checkday === 1) {bgVideo.src = dayRainny;}
-    if(checkweather === 1 && checkday === 0) {bgVideo.src = nightClear;}
-    if(checkweather === 0 && checkday === 0) {bgVideo.src = nightRainny;}
+    if(checkweather === 1 && checkday === 1) {
+        bgVideoSub.src = dayClear;
+        setTimeout(() => {
+            bgVideo.src = dayClear;
+        }, 200);
+    }
+    if(checkweather === 0 && checkday === 1) {
+        bgVideoSub.src = dayRainny;
+        setTimeout(() => {
+            bgVideo.src = dayRainny;
+        }, 200);
+    }
+    if(checkweather === 1 && checkday === 0) {
+        bgVideoSub.src = nightClear;
+        setTimeout(() => {
+            bgVideo.src = nightClear;
+        }, 200);
+    }
+    if(checkweather === 0 && checkday === 0) {
+        bgVideoSub.src = nightRainny;
+        setTimeout(() => {
+            bgVideo.src = nightRainny;
+        }, 200);
+    }
 }
 
 
