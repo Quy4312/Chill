@@ -153,6 +153,33 @@ function bookcafechange(){
  checksreenhightlight();
 }
 
+function loadSong(){
+    nextBtn.addEventListener('click',function(){
+        currentindex+=1;
+        console.log(songs[currentindex].path);
+         audio.src=songs[currentindex].path;
+         namesong.textContent=songs[currentindex].name;
+         if(isPlaying==true)
+         {audio.play();
+         }
+         else{
+            audio.pause();
+         }
+         
+    });
+    backBtn.addEventListener('click',function(){
+        currentindex-=1;
+        audio.src=songs[currentindex].path;
+        namesong.textContent=songs[currentindex].name;
+        if(isPlaying==true)
+         {audio.play();
+         }
+         else{
+            audio.pause();
+         }
+    })
+}
+loadSong();
 
 
 // function showhidden(name){

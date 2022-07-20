@@ -21,6 +21,74 @@ caferoom.addEventListener('click',caferoomchange);
 bookcafe .addEventListener('click',bookcafechange);
 chillvibes.addEventListener('click',chillvibeschange);
 
+
+playBtn.addEventListener('click',function(){
+    if(isPlaying===false){
+        console.log('play...');
+        audio.play();   
+        isPlaying=true;  
+        playBtn.src="./assets/img/pause.png";
+    }
+    else{
+        console.log('pause...');
+
+        audio.pause();
+        isPlaying=false;
+        playBtn.src="./assets/img/play.png";
+
+        
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // caferoom.addEventListener('click',()=>{
 //     console.log('caferoom....');
 //      dayClear='./assets/videos/CafeDay.mp4';

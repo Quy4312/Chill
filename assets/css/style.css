@@ -265,3 +265,34 @@ input:checked[type="checkbox"]::before {
 #caferoom {
     opacity: 0.5;
 }
+.main .bottombar-container{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+.main .bottombar{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 20%;
+}
+.main .bottom__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#play{
+    width: 57px;
+    margin: 0 25px;
+    object-fit: cover;
+}
+.bottom__nav img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.main .namesong{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
