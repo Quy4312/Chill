@@ -42,6 +42,9 @@ playBtn.addEventListener('click',function(){
 
 
 
+// requestAnimationFrame(function(){
+//     bgVideo.src = dayRainny;
+// })
 
 
 

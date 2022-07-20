@@ -4,6 +4,7 @@ function changeScene() {
         setTimeout(() => {
             bgVideo.src = nightClear;
         }, 200);
+        
         checkday = 0;
         checkweather = 1;
     }
@@ -110,12 +111,15 @@ function updatescreen()
         setTimeout(() => {
             bgVideo.src = dayClear;
         }, 200);
+        
     }
     if(checkweather === 0 && checkday === 1) {
         bgVideoSub.src = dayRainny;
         setTimeout(() => {
             bgVideo.src = dayRainny;
         }, 200);
+        
+
     }
     if(checkweather === 1 && checkday === 0) {
         bgVideoSub.src = nightClear;
