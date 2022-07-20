@@ -1,4 +1,5 @@
 checksreenhightlight();
+renderclear();
 dayNight.addEventListener('click',changeScene);
 weaTher.addEventListener('click',changeweaTher);
 // taskItemscreen.addEventListener('click',showhidden('sreenBoard'));

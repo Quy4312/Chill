@@ -200,6 +200,12 @@ function loadSong(){
 }
 loadSong();
 
+function renderclear(){
+    setTimeout(function(){
+        render.removeAttribute('src');
+    },5000);
+}
+
 
 // function showhidden(name){
 //     if(name.style.display==='block'){

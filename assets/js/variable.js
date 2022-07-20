@@ -24,6 +24,7 @@ const nextBtn =document.querySelector('#next');
 var isPlaying=false;
 const audio=document.querySelector('#audio');
 const namesong=document.querySelector('.namesong');
+const render=document.querySelector('.render');
 
 var currentindex=0;
 
