@@ -85,21 +85,24 @@ function changeweaTher() {
 
 }
 function checksreenhightlight(){
-    if(chillvibeshl==1){
-        chillvibes.style.opacity=1;
-        bookcafe.style.opacity=0.5;
-        caferoom.style.opacity=0.5;
+    if(chillvibeshl===1){
+        console.log('chill....');
+        chillvibes.style.opacity="1";
+        bookcafe.style.opacity="0.5";
+        caferoom.style.opacity="0.5";
     }
-    else if(bookcafehl==1){
-        bookcafe.style.opacity=1;
-        caferoom.style.opacity=0.5;
-        chillvibes.style.opacity=0.5;
+    else if(bookcafehl===1){
+        bookcafe.style.opacity="1";
+        caferoom.style.opacity="0.5";
+        chillvibes.style.opacity="0.5";
 
     }
-    else if(caferoomhl==1){
-        caferoom.style.opacity=1;
-        bookcafe.style.opacity=0.5;
-        chillvibes.style.opacity=0.5;
+    else if(caferoomhl===1){
+    console.log('caferoom....');
+
+        caferoom.style.opacity="1";
+        bookcafe.style.opacity="0.5";
+        chillvibes.style.opacity="0.5";
 
 
     }
@@ -114,14 +117,52 @@ function updatescreen()
 }
 
 
+function caferoomchange(){
+    dayClear='./assets/videos/CafeDay.mp4';
+ nightClear='./assets/videos/CafeNight.mp4';
+ dayRainny='./assets/videos/CafeRainyDay.mp4';
+ nightRainny='./assets/videos/CafeRainyNight.mp4';
+ updatescreen();
+ chillvibeshl = 0;
+ bookcafehl = 0;
+ caferoomhl = 1;
+ checksreenhightlight();
+}
+
+function chillvibeschange(){
+    dayClear='./assets/videos/Day-sunny.mp4';
+ nightClear='./assets/videos/Night-clear.mp4';
+ dayRainny='./assets/videos/Day-rainny.mp4';
+ nightRainny='./assets/videos/Night-rainny.mp4';
+ updatescreen();
+ chillvibeshl = 1;
+ bookcafehl = 0;
+ caferoomhl = 0;
+ checksreenhightlight();
+}
+
+function bookcafechange(){
+    dayClear='./assets/videos/ExteriorDay.mp4';
+ nightClear='./assets/videos/ExteriorNight.mp4';
+ dayRainny='./assets/videos/ExteriorRainyDay.mp4';
+ nightRainny='./assets/videos/ExteriorRainyNight.mp4';
+ updatescreen();
+ chillvibeshl = 0;
+ bookcafehl = 1;
+ caferoomhl = 0;
+ checksreenhightlight();
+}
 
 
-// function showhidden(log){
-//     if(log.style.display==='block'){
-//         log.style.display='none';
+
+// function showhidden(name){
+//     if(name.style.display==='block'){
+//         console.log('block....');
+//         name.style.display='none';
 //     }
 //     else{
-//         log.style.display='block';
+//         console.log('none....');
+//         name.style.display='block';
 //     }
 
 // }

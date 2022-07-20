@@ -260,3 +260,8 @@ input:checked[type="checkbox"]::before {
 #caferoom:hover {
     opacity: 1!important;
 }
+#chillvibes ,
+#bookcafe ,
+#caferoom {
+    opacity: 0.5;
+}
