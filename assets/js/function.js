@@ -4,6 +4,11 @@ taskItemscreen.addEventListener('click', () => {
     }
     else {
         sreenBoard.style.display = 'block';
+        soundBoard.style.display = 'none';
+        timeBoard.style.display = 'none';
+        musicBoard.style.display = 'none';
+
+
     }
 });
 
@@ -16,6 +21,9 @@ taskTime.addEventListener('click', () => {
     }
     else {
         timeBoard.style.display = 'block';
+        sreenBoard.style.display = 'none';
+        soundBoard.style.display = 'none';
+        musicBoard.style.display = 'none';
     }
 });
 
@@ -28,6 +36,10 @@ taskMusic.addEventListener('click', () => {
     }
     else {
         musicBoard.style.display = 'block';
+        timeBoard.style.display = 'none';
+        sreenBoard.style.display = 'none';
+        soundBoard.style.display = 'none';
+        
     }
 });
 
@@ -40,6 +52,10 @@ taskItemsound.addEventListener('click', () => {
     }
     else {
         soundBoard.style.display = 'block';
+        musicBoard.style.display = 'none';
+        timeBoard.style.display = 'none';
+        sreenBoard.style.display = 'none';
+       
     }
 });
 
@@ -641,13 +657,13 @@ function start() {
             h = 0;
 
         }
+        
         // console.log(h);
         // h=0;
         m = parseInt(document.getElementById('m_val').value);
         if (isNaN(m)) {
             console.log(m);
             m = 0;
-
         }
         s = parseInt(document.getElementById('s_val').value);
         if (isNaN(s)) {
