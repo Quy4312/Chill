@@ -3,43 +3,47 @@ renderclear();
 dayNight.addEventListener('click',changeScene);
 weaTher.addEventListener('click',changeweaTher);
 // taskItemscreen.addEventListener('click',showhidden('sreenBoard'));
-taskItemscreen.addEventListener('click',()=>{
-    if(sreenBoard.style.display==='block'){
-                sreenBoard.style.display='none';
-            }
-            else{
-                sreenBoard.style.display='block';
-            }
-});
+// taskItemscreen.addEventListener('click',()=>{
+//     if(sreenBoard.style.display==='block'){
+//                 sreenBoard.style.display='none';
+//             }
+//             else{
+//                 sreenBoard.style.display='block';
+//             }
+// });
 
-sreenBoard.addEventListener('click',function(event){
-event.stopPropagation();
-})
-
-
+// sreenBoard.addEventListener('click',function(event){
+// event.stopPropagation();
+// })
 
 caferoom.addEventListener('click',caferoomchange);
 bookcafe .addEventListener('click',bookcafechange);
 chillvibes.addEventListener('click',chillvibeschange);
 
 
-playBtn.addEventListener('click',function(){
-    if(isPlaying===false){
-        console.log('play...');
-        audio.play();   
-        isPlaying=true;  
-        playBtn.src="./assets/img/pause.png";
-    }
-    else{
-        console.log('pause...');
+// playBtn.addEventListener('click',function(){
+//     if(isPlaying===false){
+//         console.log('play...');
+//         audio.play();   
+//         isPlaying=true;  
+//         playBtn.src="./assets/img/pause.png";
+//         // volumeBar.style.width=audio.currentTime/audio.duration *100+ '%' ;
+//         // volumeCircle.style.left=audio.currentTime/audio.duration *100 -1+ '%' ;
+//     }
+//     else{
+//         console.log('pause...');
 
-        audio.pause();
-        isPlaying=false;
-        playBtn.src="./assets/img/play.png";
+//         audio.pause();
+//         isPlaying=false;
+//         playBtn.src="./assets/img/play.png";
 
         
-    }
-})
+//     }
+// })
+
+//chạy hàm theo dõi tiến độ
+// setTimeout(tiendo(),100)
+
 
 
 
@@ -52,47 +56,6 @@ playBtn.addEventListener('click',function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // caferoom.addEventListener('click',()=>{
 //     console.log('caferoom....');
 //      dayClear='./assets/videos/CafeDay.mp4';
@@ -119,3 +82,6 @@ playBtn.addEventListener('click',function(){
 //  checksreenhightlight();
 // });
 
+startbtn.addEventListener('click',start);
+stopbtn.addEventListener('click',stop);
+resetbtn.addEventListener('click',reset);
