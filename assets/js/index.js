@@ -19,7 +19,10 @@ weaTher.addEventListener('click',changeweaTher);
 caferoom.addEventListener('click',caferoomchange);
 bookcafe .addEventListener('click',bookcafechange);
 chillvibes.addEventListener('click',chillvibeschange);
-
+comeoutBtn.addEventListener('click',bookcafechange);
+comeinBtn.addEventListener('click',caferoomchange);
+signupinchange();
+headerSignupin.addEventListener('click',signupinctnchange);
 
 // playBtn.addEventListener('click',function(){
 //     if(isPlaying===false){
@@ -82,6 +85,6 @@ chillvibes.addEventListener('click',chillvibeschange);
 //  checksreenhightlight();
 // });
 
-startbtn.addEventListener('click',start);
-stopbtn.addEventListener('click',stop);
-resetbtn.addEventListener('click',reset);
+// startbtn.addEventListener('click',start);
+// stopbtn.addEventListener('click',stop);
+// resetbtn.addEventListener('click',reset);

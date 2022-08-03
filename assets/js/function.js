@@ -27,9 +27,9 @@ taskTime.addEventListener('click', () => {
     }
 });
 
-timeBoard.addEventListener('click', function (event) {
-    event.stopPropagation();
-})
+// timeBoard.addEventListener('click', function (event) {
+//     event.stopPropagation();
+// })
 taskMusic.addEventListener('click', () => {
     if (musicBoard.style.display === 'block') {
         musicBoard.style.display = 'none';
@@ -65,16 +65,101 @@ soundBoard.addEventListener('click', function (event) {
 chillkeyboardbtn.addEventListener('click', () => {
     if (chillkeyboardbtnsub.style.display === 'block') {
         chillkeyboardbtnsub.style.display = 'none';
+        KeyBoardaudio.pause();
     }
     else {
         chillkeyboardbtnsub.style.display = 'block';
-        KeyBoardaudio.pause();
     }
 });
 
 chillkeyboardbtnsub.addEventListener('click', function (event) {
     event.stopPropagation();
 })
+chillraincitybtn.addEventListener('click', () => {
+    if (chillraincitybtnsub.style.display === 'block') {
+        chillraincitybtnsub.style.display = 'none';
+    }
+    else {
+        chillraincitybtnsub.style.display = 'block';
+        RainCityaudio.pause();
+    }
+});
+
+chillraincitybtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+// caferoomkeyboard
+caferoomkeyboardbtn.addEventListener('click', () => {
+    if (caferoomkeyboardbtnsub.style.display === 'block') {
+        caferoomkeyboardbtnsub.style.display = 'none';
+    }
+    else {
+        caferoomkeyboardbtnsub.style.display = 'block';
+        KeyBoardaudio.pause();
+    }
+});
+
+caferoomkeyboardbtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+
+// caferoomraincity
+caferoomraincitybtn.addEventListener('click', () => {
+    if (caferoomraincitybtnsub.style.display === 'block') {
+        caferoomraincitybtnsub.style.display = 'none';
+    }
+    else {
+        caferoomraincitybtnsub.style.display = 'block';
+        RainCityaudio.pause();
+    }
+});
+
+caferoomraincitybtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+//caferoompeople
+caferoompeoplebtn.addEventListener('click', () => {
+    if (caferoompeoplebtnsub.style.display === 'block') {
+        caferoompeoplebtnsub.style.display = 'none';
+    }
+    else {
+        caferoompeoplebtnsub.style.display = 'block';
+        Peopleaudio.pause();
+    }
+});
+
+caferoompeoplebtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+//bookcaferaincity
+bookcaferaincitybtn.addEventListener('click', () => {
+    if (bookcaferaincitybtnsub.style.display === 'block') {
+        bookcaferaincitybtnsub.style.display = 'none';
+    }
+    else {
+        bookcaferaincitybtnsub.style.display = 'block';
+        RainCityaudio.pause();
+    }
+});
+
+bookcaferaincitybtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+//bookcafecitytraffic
+bookcafecitytrafficbtn.addEventListener('click', () => {
+    if (bookcafecitytrafficbtnsub.style.display === 'block') {
+        bookcafecitytrafficbtnsub.style.display = 'none';
+    }
+    else {
+        bookcafecitytrafficbtnsub.style.display = 'block';
+        CityTrafficaudio.pause();
+    }
+});
+
+bookcafecitytrafficbtnsub.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
+
 
 
 function changeScene() {
@@ -215,6 +300,15 @@ function updatescreen() {
 
 
 function caferoomchange() {
+    chillcontainer.style.display='none';
+    caferoomcontainer.style.display='block';
+    bookcafecontainer.style.display='none';
+    Peopleaudio.pause();
+
+    
+    CityTrafficaudio.pause();
+    RainCityaudio.pause();
+    KeyBoardaudio.pause();
     dayClear = './assets/videos/CafeDay.mp4';
     nightClear = './assets/videos/CafeNight.mp4';
     dayRainny = './assets/videos/CafeRainyDay.mp4';
@@ -227,11 +321,22 @@ function caferoomchange() {
 }
 
 function chillvibeschange() {
+    caferoomcontainer.style.display='none';
+    bookcafecontainer.style.display='none';
+    
+    CityTrafficaudio.pause();
+    Peopleaudio.pause();
+
+
+    RainCityaudio.pause();
+    KeyBoardaudio.pause();
+
     dayClear = './assets/videos/Day-sunny.mp4';
     nightClear = './assets/videos/Night-clear.mp4';
     dayRainny = './assets/videos/Day-rainny.mp4';
     nightRainny = './assets/videos/Night-rainny.mp4';
     updatescreen();
+    chillcontainer.style.display='block';
     chillvibeshl = 1;
     bookcafehl = 0;
     caferoomhl = 0;
@@ -239,11 +344,20 @@ function chillvibeschange() {
 }
 
 function bookcafechange() {
+    chillcontainer.style.display='none';
+    caferoomcontainer.style.display='none';
+    Peopleaudio.pause();
+    CityTrafficaudio.pause();
+
+    RainCityaudio.pause();
+    KeyBoardaudio.pause();
     dayClear = './assets/videos/ExteriorDay.mp4';
     nightClear = './assets/videos/ExteriorNight.mp4';
     dayRainny = './assets/videos/ExteriorRainyDay.mp4';
     nightRainny = './assets/videos/ExteriorRainyNight.mp4';
     updatescreen();
+    bookcafecontainer.style.display='block';
+
     chillvibeshl = 0;
     bookcafehl = 1;
     caferoomhl = 0;
@@ -321,9 +435,34 @@ ForestNight.addEventListener('mousedown', () => {
 KeyBoard.addEventListener('mousedown', () => {
     isReadyToDragKeyBoard = true;
 })
-envkeyboard.addEventListener('mousedown', () => {
+envkeyboardchill.addEventListener('mousedown', () => {
     isReadyToDragKeyBoard = true;
 })
+envraincitychill.addEventListener('mousedown', () => {
+    isReadyToDragRainCity = true;
+})
+envkeyboardcaferoom.addEventListener('mousedown', () => {
+    isReadyToDragKeyBoard = true;
+    console.log('envkeyboardcaferoom');
+})
+envraincitycaferoom.addEventListener('mousedown', () => {
+    isReadyToDragRainCity = true;
+    
+})
+envpeoplecaferoom.addEventListener('mousedown', () => {
+    isReadyToDragPeople = true;
+    
+})
+envraincitybookcafe.addEventListener('mousedown', () => {
+    isReadyToDragRainCity = true;
+    
+})
+envcitytrafficbookcafe.addEventListener('mousedown', () => {
+    isReadyToDragCityTraffic = true;
+    
+})
+
+
 
 Fan.addEventListener('mousedown', () => {
     isReadyToDragFan = true;
@@ -453,25 +592,157 @@ KeyBoard.addEventListener('mousemove', (evt) => {
     }
 
 })
-//KeyBoardenv
-envkeyboard.addEventListener('mousemove', (evt) => {
+//KeyBoardenvchill
+envkeyboardchill.addEventListener('mousemove', (evt) => {
     const clientX = evt.clientX;
-    const left = envkeyboard.getBoundingClientRect().left
-    const width = envkeyboard.getBoundingClientRect().width
+    const left = envkeyboardchill.getBoundingClientRect().left
+    const width = envkeyboardchill.getBoundingClientRect().width
     const min = left
-    const max = envkeyboard.getBoundingClientRect().width + left
+    const max = envkeyboardchill.getBoundingClientRect().width + left
     if (isReadyToDragKeyBoard && clientX >= min && clientX <= max) {
         const percent = (clientX - left) / width
         // console.log(percent);
         KeyBoardbar.style.width = (percent * 100) + '%';
         KeyBoardcircle.style.left = percent * 100 + '%';
-        envkeyboardbar.style.width = (percent * 100) + '%';
-        envkeyboardcircle.style.left = percent * 100 + '%';
+        envkeyboardbarchill.style.width = (percent * 100) + '%';
+        envkeyboardcirclechill.style.left = percent * 100 + '%';
         KeyBoardaudio.play();
         KeyBoardaudio.volume = percent;
     }
 
 })
+// envraincitychill
+envraincitychill.addEventListener('mousemove', (evt) => {
+    const clientX = evt.clientX;
+    const left = envraincitychill.getBoundingClientRect().left
+    const width = envraincitychill.getBoundingClientRect().width
+    const min = left
+    const max = envraincitychill.getBoundingClientRect().width + left
+    if (isReadyToDragRainCity && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        RainCitybar.style.width = (percent * 100) + '%';
+        RainCitycircle.style.left = percent * 100 + '%';
+        envraincitybarchill.style.width = percent * 100 + '%';
+        envraincitycirclechill.style.left = percent * 100 + '%';
+        RainCityaudio.play();
+        RainCityaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) RainCityaudio.volume =0;
+    }
+
+})
+// envraincitycaferoom
+envraincitycaferoom.addEventListener('mousemove', (evt) => {
+    const clientX = evt.clientX;
+    const left = envraincitycaferoom.getBoundingClientRect().left
+    const width = envraincitycaferoom.getBoundingClientRect().width
+    const min = left
+    const max = envraincitycaferoom.getBoundingClientRect().width + left
+    if (isReadyToDragRainCity && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        RainCitybar.style.width = (percent * 100) + '%';
+        RainCitycircle.style.left = percent * 100 + '%';
+        envraincitybarcaferoom.style.width = percent * 100 + '%';
+        envraincitycirclecaferoom.style.left = percent * 100 + '%';
+        RainCityaudio.play();
+        RainCityaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) RainCityaudio.volume =0;
+    }
+
+})
+// envkeyboardcaferoom
+// envkeyboardcaferoom
+envkeyboardcaferoom.addEventListener('mousemove', (evt) => {
+    // console.log('envkeyboardcaferoom');
+    const clientX = evt.clientX;
+    const left = envkeyboardcaferoom.getBoundingClientRect().left
+    const width = envkeyboardcaferoom.getBoundingClientRect().width
+    const min = left
+    const max = envkeyboardcaferoom.getBoundingClientRect().width + left
+    if (isReadyToDragKeyBoard && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        KeyBoardbar.style.width = (percent * 100) + '%';
+        KeyBoardcircle.style.left = percent * 100 + '%';
+        envkeyboardbarcaferoom.style.width = percent * 100 + '%';
+        envkeyboardcirclecaferoom.style.left = percent * 100 + '%';
+        KeyBoardaudio.play();
+        KeyBoardaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) KeyBoardaudio.volume =0;
+    }
+
+})
+//envpeoplecaferoom
+envpeoplecaferoom.addEventListener('mousemove', (evt) => {
+    // console.log('envpeoplecaferoom');
+    const clientX = evt.clientX;
+    const left = envpeoplecaferoom.getBoundingClientRect().left
+    const width = envpeoplecaferoom.getBoundingClientRect().width
+    const min = left
+    const max = envpeoplecaferoom.getBoundingClientRect().width + left
+    if (isReadyToDragPeople && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        Peoplebar.style.width = (percent * 100) + '%';
+        Peoplecircle.style.left = percent * 100 + '%';
+        envpeoplebarcaferoom.style.width = percent * 100 + '%';
+        envpeoplecirclecaferoom.style.left = percent * 100 + '%';
+        Peopleaudio.play();
+        Peopleaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) Peopleaudio.volume =0;
+    }
+
+})
+//envraicitybookcafe
+envraincitybookcafe.addEventListener('mousemove', (evt) => {
+    // console.log('envraincitybookcafe');
+    const clientX = evt.clientX;
+    const left = envraincitybookcafe.getBoundingClientRect().left
+    const width = envraincitybookcafe.getBoundingClientRect().width
+    const min = left
+    const max = envraincitybookcafe.getBoundingClientRect().width + left
+    if (isReadyToDragRainCity && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        RainCitybar.style.width = (percent * 100) + '%';
+        RainCitycircle.style.left = percent * 100 + '%';
+        envraincitybarbookcafe.style.width = percent * 100 + '%';
+        envraincitycirclebookcafe.style.left = percent * 100 + '%';
+        RainCityaudio.play();
+        RainCityaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) RainCityaudio.volume =0;
+    }
+
+})
+//envcitytrafficbookcafe
+envcitytrafficbookcafe.addEventListener('mousemove', (evt) => {
+    // console.log('envcitytrafficbookcafe');
+    const clientX = evt.clientX;
+    const left = envcitytrafficbookcafe.getBoundingClientRect().left
+    const width = envcitytrafficbookcafe.getBoundingClientRect().width
+    const min = left
+    const max = envcitytrafficbookcafe.getBoundingClientRect().width + left
+    if (isReadyToDragCityTraffic && clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log(percent);
+        CityTrafficbar.style.width = (percent * 100) + '%';
+        CityTrafficcircle.style.left = percent * 100 + '%';
+        envcitytrafficbarbookcafe.style.width = percent * 100 + '%';
+        envcitytrafficcirclebookcafe.style.left = percent * 100 + '%';
+        CityTrafficaudio.play();
+        CityTrafficaudio.volume = percent;
+        // console.log(percent);
+        if(percent<0.01) CityTrafficaudio.volume =0;
+    }
+
+})
+
 
 //Fan
 Fan.addEventListener('mousemove', (evt) => {
@@ -596,6 +867,73 @@ document.addEventListener('mouseup', () => {
 
 })
 
+
+
+
+function signupinchange(){
+    signupBtn.addEventListener('click',function() {
+        signinCtn.style.display='none';
+        signupCtn.style.display='block';
+    });
+    signinBtn.addEventListener('click',function() {
+        signupCtn.style.display='none';
+        signinCtn.style.display='block';
+    });
+
+}
+function signupinctnchange(){
+    if(signupinCtnHidden==false)
+    {
+        signupinCtn.style.display='none';
+        signupinCtnHidden=true;
+
+        console.log('none');
+    }
+    else{
+        signupinCtn.style.display='block';
+        signupinCtnHidden=false;
+        console.log('block');
+
+    }
+}
+logout.addEventListener('click',function(){
+    signupinCtn.style.display='block';
+    headerSignupin.style.display='block';
+    headerUsername.style.display='none';
+    logout.style.display='none'
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function newTimee() {
     if (s === -1) {
         m -= 1;
@@ -689,8 +1027,34 @@ function reset() {
     m = null;
     s = null;
 }
+ var web=document.documentElement;
+ var webfullscreen=false;
+
+ fullscreen.addEventListener('click', function(){
+    if (webfullscreen==true) {
+         document.exitFullscreen();
+        fullscreenicon.classList.add('fa-expand');
+        fullscreenicon.classList.remove('fa-compress');
+        webfullscreen=false;
+      } 
+    if (webfullscreen==false) {
+        web.requestFullscreen();
+        fullscreenicon.classList.remove('fa-expand');
+        fullscreenicon.classList.add('fa-compress');
+        webfullscreen=true;
+      } 
+    
+    
+  
+     
+    })
 
 
+
+
+
+    //jscountdown
+    
 
 
 

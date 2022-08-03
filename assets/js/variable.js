@@ -17,6 +17,10 @@ const timeBoard=document.querySelector('.countdown-board');
 const taskTime=document.querySelector('.countdown-container');
 const musicBoard=document.querySelector('.music-list-board');
 const taskMusic=document.querySelector('.music-container');
+const fullscreen=document.querySelector('.fs');
+const fullscreenicon=document.querySelector('#fullscreen');
+const comeoutBtn=document.querySelector('.comeout-btn');
+const comeinBtn=document.querySelector('.comein-btn');
 
 let checkweather=1;
 let checkday=1;
@@ -99,11 +103,85 @@ let isReadyToDragRiver = false;
 let isReadyToDragWaves = false;
 let isReadyToDragWind = false;
 
+
+const chillcontainer=document.querySelector('.chillvibesenvbtn-container');
+const caferoomcontainer=document.querySelector('.caferoomenvbtn-container');
+const bookcafecontainer=document.querySelector('.bookcafeenvbtn-container');
+//keyboardchill
 const chillkeyboardbtnsub=document.querySelector('.chillkeyboard-btn--sub');
 const chillkeyboardbtn=document.querySelector('.chillkeyboard-btn');
-const envkeyboard=document.querySelector('#envkeyboard')
-const envkeyboardbar=document.querySelector('#envkeyboardbar')
-const envkeyboardcircle=document.querySelector('#envkeyboardcircle')
+const envkeyboardchill=document.querySelector('#envkeyboardchill')
+const envkeyboardbarchill=document.querySelector('#envkeyboardbarchill')
+const envkeyboardcirclechill=document.querySelector('#envkeyboardcirclechill')
+// rainstchill
+const chillraincitybtnsub=document.querySelector('.chillraincity-btn--sub');
+const chillraincitybtn=document.querySelector('.chillraincity-btn');
+const envraincitychill=document.querySelector('#envraincitychill')
+const envraincitybarchill=document.querySelector('#envraincitybarchill')
+const envraincitycirclechill=document.querySelector('#envraincitycirclechill')
+
+//rainendchill
+
+
+//keyboardcaferoom
+const caferoomkeyboardbtnsub=document.querySelector('.caferoomkeyboard-btn--sub');
+const caferoomkeyboardbtn=document.querySelector('.caferoomkeyboard-btn');
+const envkeyboardcaferoom=document.querySelector('#envkeyboardcaferoom')
+const envkeyboardbarcaferoom=document.querySelector('#envkeyboardbarcaferoom')
+const envkeyboardcirclecaferoom=document.querySelector('#envkeyboardcirclecaferoom')
+// rainstcaferoom
+const caferoomraincitybtnsub=document.querySelector('.caferoomraincity-btn--sub');
+const caferoomraincitybtn=document.querySelector('.caferoomraincity-btn');
+const envraincitycaferoom=document.querySelector('#envraincitycaferoom')
+const envraincitybarcaferoom=document.querySelector('#envraincitybarcaferoom')
+const envraincitycirclecaferoom=document.querySelector('#envraincitycirclecaferoom')
+
+//rainendcaferoom
+//peoplecaferoom
+const caferoompeoplebtnsub=document.querySelector('.caferoompeople-btn--sub');
+const caferoompeoplebtn=document.querySelector('.caferoompeople-btn');
+const envpeoplecaferoom=document.querySelector('#envpeoplecaferoom');
+const envpeoplebarcaferoom=document.querySelector('#envpeoplebarcaferoom');
+const envpeoplecirclecaferoom=document.querySelector('#envpeoplecirclecaferoom');
+
+//peoplecaferoomend
+//raincitybookcafe
+const bookcaferaincitybtnsub=document.querySelector('.bookcaferaincity-btn--sub');
+const bookcaferaincitybtn=document.querySelector('.bookcaferaincity-btn');
+const envraincitybookcafe=document.querySelector('#envraincitybookcafe');
+const envraincitybarbookcafe=document.querySelector('#envraincitybarbookcafe');
+const envraincitycirclebookcafe=document.querySelector('#envraincitycirclebookcafe');
+//citytrafficbookcafe
+const bookcafecitytrafficbtnsub=document.querySelector('.bookcafecitytraffic-btn--sub');
+const bookcafecitytrafficbtn=document.querySelector('.bookcafecitytraffic-btn');
+const envcitytrafficbookcafe=document.querySelector('#envcitytrafficbookcafe');
+const envcitytrafficbarbookcafe=document.querySelector('#envcitytrafficbarbookcafe');
+const envcitytrafficcirclebookcafe=document.querySelector('#envcitytrafficcirclebookcafe');
+const signupBtn=document.querySelector('#signupbtn');
+const signinBtn=document.querySelector('#signinbtn');
+const signinCtn=document.querySelector('.signin-container');
+const signupCtn=document.querySelector('.signup-container');
+const signupinCtn=document.querySelector('.signup-in');
+var signupinCtnHidden=false;
+const signininput=document.querySelector('#email1');
+const signupinput=document.querySelector('#email');
+const messageError=document.querySelector('.message-error');
+const messageSuccess=document.querySelector('.message-success');
+const headerSignupin=document.querySelector('.js-header__signupin');
+const logout=document.querySelector('.js-logout');
+const headerUsername=document.querySelector('.header__username');
+const headerUsernameText=document.querySelector('#header__username-text');
+
+
+
+
+
+
+
+
+
+
+
 const startbtn=document.querySelector('#start');
 const stopbtn=document.querySelector('#stop');
 const resetbtn=document.querySelector('#reset');
