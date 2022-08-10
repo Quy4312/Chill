@@ -1065,93 +1065,267 @@ input:checked[type="checkbox"]::before {
     display: none;
 }
 
-.cd-text {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    color: aqua;
-}
 
-.cd-time {
-    width: 400px;
+
+
+
+/* oclock css-start */
+ 
+.countdown-btn{
+    width: 231px;
+    height: 20px;
+    position: absolute;
+    top: 360px;
+    right: 76px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 30px;
-    flex: 1 0 0%;
 
 }
-
-#h_val,
-#m_val,
-#s_val {
-    width: 30%;
-    padding: 5px;
-    /* border-color: rgb(92 71 71 / 79%); */
-    border: 3px solid rgb(139 126 126 / 79%);
-    border-radius: 5px;
-    font-weight: bold;
-
-}
-
-#h_val {
-    margin-left: 20px;
-}
-
-#s_val {
-    margin-right: 20px;
-}
-
-.cd-btn {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 40px;
-    column-gap: 50px;
-    padding: 0 45px;
-
-}
-
-.cd-btn>input {
-    font-weight: bold;
-    width: 90px;
+.cd-btn{
+    width: 65px;
     height: 30px;
-    border-radius: 20px;
-    /* background-color: transparent; */
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right bottom, rgb(225 29 29 / 88%), rgb(23 203 235 / 75%));
     border: 1px solid #fff;
+    border-radius: 5px;
+    /* padding: 5px 10px; */
+    text-align: center;
 }
-
-.cd-btn>input:hover {
-    cursor: pointer;
-    opacity: 0.6;
+.cd-btn:hover{
+   cursor: pointer;
+   opacity: 0.6;
 }
-
-.oclock {
-    width: 300px;
-    height: 64px;
-    background: linear-gradient(to right bottom, rgb(225 29 29 / 88%), rgb(23 203 235 / 75%));
-    margin: 0 auto;
-    margin-top: 29px;
-    border-radius: 6px;
-    display: flex;
-    flex: 1 0 0%;
-    justify-content: center;
-    column-gap: 20px;
-    align-content: center;
+#h{
+    position: absolute;
+    top: 278px;
+    right: 220px;
     font-size: 20px;
-    font-weight: bold;
     color: #fff;
-    padding: 20px;
-
-
+}
+#m{
+    position: absolute;
+    top: 278px;
+    right: 182px;
+    font-size: 20px;
+    color: #fff;
+}
+#s{
+    position: absolute;
+    top: 278px;
+    right: 144px;
+    font-size: 20px;
+    color: #fff;
+}
+.startcd{
+    position: absolute;
+    color: rgb(76, 218, 76);
+    bottom: 60px;
+    right: 115px;
+    font-weight: bold;
+    display: none;
+}
+.timeup{
+    position: absolute;
+    color: red;
+    bottom: 60px;
+    right: 160px;
+    font-weight: bold;
+    display: none;
+}
+.oclock {
+position: relative;
+width: 250px;
+height: 250px;
+background-color: #cccccc45;
+margin-top: 20px;
+margin-left: 75px;
+border-radius: 50%;
+}
+.oclock-item{
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oclock-item:hover{
+    background-color: #ccc;
+    cursor: pointer;
 
 }
+.dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 121px;
+    right: 121px;
+    border-radius: 50%;
+    background: #FFF;
+}
+.oclock-hours-0{
+    right: 105px;
+    top: 0px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-1{
+    right: 61px;
+    top: 13.732px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-2{
+    right: 22px;
+    top: 51.25px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-3{
+    right: 8px;
+    top: 102.5px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-4{
+    right: 22px;
+    bottom: 51.25px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-5{
+    right: 61px;
+    bottom: 13.732px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-6{
+    right: 105px;
+    bottom: 0;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-7{
+    left: 61px;
+    bottom: 13.732px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-8{
+    left: 22px;
+    bottom: 51.25px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-9{
+    left: 8px;
+    top: 102.5px;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-10{
+    left: 22px;
+    top: 51.25px;;
+    font-size: 30px;
+    color: #fff;
+}
+.oclock-hours-11{
+    left: 61px;
+    top: 13.732px;
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* oclock css-end */
+
+
+
+
+
 
 .signup-in{
     position: fixed;

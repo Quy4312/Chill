@@ -179,6 +179,21 @@ const headerUsernameText=document.querySelector('#header__username-text');
 
 
 
+const hoursList=document.querySelectorAll('.oclock-item');
+const oclockHours_0=document.querySelector('.oclock-hours-0');
+const oclockHours_1=document.querySelector('.oclock-hours-1');
+const oclockHours_2=document.querySelector('.oclock-hours-2');
+const oclockHours_3=document.querySelector('.oclock-hours-3');
+const oclockHours_4=document.querySelector('.oclock-hours-4');
+const oclockHours_5=document.querySelector('.oclock-hours-5');
+const oclockHours_6=document.querySelector('.oclock-hours-6');
+const oclockHours_7=document.querySelector('.oclock-hours-7');
+const oclockHours_8=document.querySelector('.oclock-hours-8');
+const oclockHours_9=document.querySelector('.oclock-hours-9');
+const oclockHours_10=document.querySelector('.oclock-hours-10');
+const oclockHours_11=document.querySelector('.oclock-hours-11');
+const startCd=document.querySelector('.startcd')
+const timeUp=document.querySelector('.timeup')
 
 
 

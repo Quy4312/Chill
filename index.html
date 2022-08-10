@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/css/style.scss">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/res.css">
-    <link rel="stylesheet" href="./assets/css/tpicker.css">
     <title>Chill time</title>
     <link rel="icon"
         href="https://png.pngtree.com/element_our/png_detail/20181226/music-note-vector-icon-png_276823.jpg"
@@ -48,8 +47,8 @@
             <div class="header__icon--logout js-logout"><i><i
                         class="fa-solid fa-arrow-right-from-bracket "></i></i><span
                     style="color:#fff;margin-left: 10px;">Log out</span>
-                </div>
-            
+            </div>
+
 
         </div>
         <div class="header__username">
@@ -57,12 +56,14 @@
             <span id="header__username-text">""</span>
 
         </div>
-    
+
     </div>
 
     <div class="main">
-        <video class="background-video--sub" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" playsinline muted></video>
-        <video class="background-video" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" playsinline muted></video>
+        <video class="background-video--sub" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" playsinline
+            muted></video>
+        <video class="background-video" src="./assets/videos/Day-sunny.mp4" loop="" autoplay="" playsinline
+            muted></video>
         <!-- render video-start -->
         <div style="display: none;">
             <video class="render" src="./assets/videos/CafeDay.mp4"></video>
@@ -333,10 +334,14 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="video-youtubectn">
-                        <!-- <video loop="" autoplay="" muted src="https://www.youtube.com/watch?v=lwZ6mRpD62o&list=RDlwZ6mRpD62o&start_radio=1"></video> -->
+                        <!-- <video loop="" autoplay="" muted src="https://www.youtube.com/watch?v=Qi2QnHss86Y&list=PL_xAb68hDPpR3pgQiwc6A29eRo9-zP8rE&index=3"></video> -->
+                        <video width="320" height="240" controls>
+                            <source
+                                src="https://www.youtube.com/watch?v=274GdLSXCiw&list=PL_xAb68hDPpR3pgQiwc6A29eRo9-zP8rE&index=2">
+                        </video>
                         <!-- <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="kidsai - GIAYPHUT (Official Audio)" width="100%" height="100%" src="https://www.youtube.com/embed/null?autoplay=0&amp;mute=0&amp;controls=1&amp;playsinline=1&amp;listType=playlist&amp;list=RDlwZ6mRpD62o&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;widgetid=5" id="widget6"></iframe> -->
                     </div>
-                    
+
 
                 </div>
             </div>
@@ -364,18 +369,45 @@
             <div class="taskbar__item countdown-container">
                 <i class="fa-solid fa-clock"></i>
                 <div class="countdown-board">
+                    <div class="oclock">
+                        <div class="dot"></div>
+                        <div class="oclock-item oclock-hours-0">0</div>
+                        <div class="oclock-item oclock-hours-1">1</div>
+                        <div class="oclock-item oclock-hours-2">2</div>
+                        <div class="oclock-item oclock-hours-3">3</div>
+                        <div class="oclock-item oclock-hours-4">4</div>
+                        <div class="oclock-item oclock-hours-5">5</div>
+                        <div class="oclock-item oclock-hours-6">6</div>
+                        <div class="oclock-item oclock-hours-7">7</div>
+                        <div class="oclock-item oclock-hours-8">8</div>
+                        <div class="oclock-item oclock-hours-9">9</div>
+                        <div class="oclock-item oclock-hours-10">10</div>
+                        <div class="oclock-item oclock-hours-11">11</div>
+                    </div>
+                    
+                        <div id="h">00</div>
+                        <div style="position: absolute; top:280px;color:#fff;right:209px">:</div>
+                        <div id="m">00</div>
+                        <div style="position: absolute; top:280px;color:#fff;right:173px">:</div>
+                        <div id="s" >00</div>
+                        
+                        <div class="startcd">Start Counting Down</div>
+                        <div class="timeup">Time Up</div>
+                        
+                    
+                    <div class="countdown-btn">
+                        <div class="cd-btn reset-btn" onclick="reset()">Reset</div>
+                        <div class="cd-btn stop-btn" onclick="stop()">Stop</div>
+                        <div class="cd-btn start-btn"  onclick="start()">Start</div>
+                    </div>
                   
+
                 </div>
 
-                <!-- <div class="coutdown-ctn">
-                    <div style="margin:100px;float:left;">
 
-                        <input id="timepkr" style="width:100px;float:left;" class="form-control" placeholder="HH:MM" />
-                        <button type="button" class="btn btn-primary" onclick="showpickers('timepkr',24)" style="width:40px;float:left;"><i class="fa fa-clock-o"></i>
-                  
-                      </div>
-                  <div class="timepicker"></div> Important to add and keep it seprate to the end
-                </div> -->
+               
+
+                 
 
             </div>
         </div>
@@ -458,7 +490,7 @@ let quy = document.querySelectorAll('.switch')
 <script src="./assets/js/variable.js"></script>
 <script src="./assets/js/function.js"></script>
 <script src="./assets/js/index.js"></script>
-<script src="./assets/js/tpicker.js"></script>
+
 
 
 

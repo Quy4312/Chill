@@ -27,9 +27,9 @@ taskTime.addEventListener('click', () => {
     }
 });
 
-// timeBoard.addEventListener('click', function (event) {
-//     event.stopPropagation();
-// })
+timeBoard.addEventListener('click', function (event) {
+    event.stopPropagation();
+})
 taskMusic.addEventListener('click', () => {
     if (musicBoard.style.display === 'block') {
         musicBoard.style.display = 'none';
@@ -924,13 +924,215 @@ logout.addEventListener('click',function(){
 
 
 
+//countdown-start
 
 
 
 
+var isHours=true;
+var h_val=null;
+var m_val=null;
+var s_val=59;
+function setTime(){
+    
+    if(m_val<10){
+
+        document.getElementById('m').innerText ='0'+ m_val.toString();
+    }
+    else{
+        document.getElementById('m').innerText = m_val.toString();
+
+    }
+    document.getElementById('s').innerText = '00';
+}
+
+    oclockHours_0.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=0
+            console.log('m_val=0');
+            setTime()
+        
+
+        }
+        if(h_val==null&&isHours==true){
+            console.log('h_val=0');
+            h_val=0
+            changeminute();
+        }
+    })
+    oclockHours_1.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=5
+            console.log('m_val=5');
+            setTime()
+
+        }
+        if(h_val==null&&isHours==true){
+            h_val=1
+            console.log('h_val=1');
+            changeminute();
+
+        }
+    })
+    oclockHours_2.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=10;
+            console.log('m_val=10');
+            setTime()
+
+        }
+        if(h_val==null&&isHours==true){
+           h_val=2;
+           console.log('h_val=2');
+           changeminute();
+
+           
 
 
+       }
 
+    })
+    oclockHours_3.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=15
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=3
+            changeminute();
+
+       }
+    })
+    oclockHours_4.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=20
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=4
+            changeminute();
+
+       }
+
+    })
+    oclockHours_5.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=25
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=5
+            changeminute();
+
+       }
+
+    })
+    oclockHours_6.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=30
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=6
+            changeminute();
+
+       }
+
+    })
+    oclockHours_7.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=35
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=7
+            changeminute();
+
+       }
+
+    })
+    oclockHours_8.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=40
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=8
+            changeminute();
+
+       }
+
+    })
+    oclockHours_9.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=45
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=9
+            changeminute();
+
+       }
+
+    })
+    oclockHours_10.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=50
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=10
+            changeminute();
+
+       }
+
+    })
+    oclockHours_11.addEventListener('click',function(){
+        if(m_val==null&&isHours==false){
+            m_val=55
+            setTime()
+        }
+        if(h_val==null&&isHours==true){
+           h_val=11
+            changeminute();
+
+       }
+
+    })
+        
+
+
+ function changeminute(){
+    if(h_val<10){
+
+        document.getElementById('h').innerText ='0'+ h_val.toString();
+    }
+    else{
+        document.getElementById('h').innerText == h_val.toString();
+
+    }
+     console.log('hours');
+     oclockHours_0.innerText='0';
+     oclockHours_1.innerText="5";
+     oclockHours_2.innerHTML='10'
+     oclockHours_3.innerHTML='15'
+     oclockHours_4.innerHTML='20'
+     oclockHours_5.innerHTML='25'
+     oclockHours_6.innerHTML='30'
+     oclockHours_7.innerHTML='35'
+     oclockHours_8.innerHTML='40'
+     oclockHours_9.innerHTML='45'
+     oclockHours_10.innerHTML='50'
+     oclockHours_11.innerHTML='55'
+     isHours=false;
+
+ }
+
+       
+
+        
+
+    
 
 
 
@@ -964,10 +1166,11 @@ function newTimee() {
         Windaudio.pause();
         audio.pause();
         playBtn.src = "./assets/img/play.png";
-        alert('Hết giờ');
-        document.querySelector('#h_val').value =" ";
-    document.querySelector('#m_val').value =" ";
-    document.querySelector('#s_val').value =" ";
+        timeUp.style.display='block';
+            setTimeout(function(){
+            timeUp.style.display='none';
+
+            },1000)
     h = null;
     m = null;
     s = null;
@@ -975,9 +1178,33 @@ function newTimee() {
     }
 
     /* HIỂN THỊ ĐỒNG HỒ*/
-    document.getElementById('h').innerText = h.toString();
-    document.getElementById('m').innerText = m.toString();
-    document.getElementById('s').innerText = s.toString();
+    // document.getElementById('h').innerText = h.toString();
+    // document.getElementById('m').innerText = m.toString();
+    // document.getElementById('s').innerText = s.toString();
+    if(h<10){
+
+        document.getElementById('h').innerText ='0'+ h.toString();
+    }
+    else{
+        document.getElementById('h').innerText == h.toString();
+
+    }
+    if(m<10){
+
+        document.getElementById('m').innerText ='0'+ m.toString();
+    }
+    else{
+        document.getElementById('m').innerText = m.toString();
+
+    }
+    if(s<10){
+
+        document.getElementById('s').innerText ='0'+ s.toString();
+    }
+    else{
+        document.getElementById('s').innerText = s.toString();
+
+    }
 
     timeout = setTimeout(function () {
         s--;
@@ -986,29 +1213,35 @@ function newTimee() {
 }
 
 function start() {
+    startCd.style.display='block';
+            setTimeout(function(){
+            startCd.style.display='none';
+
+            },1000)
+    console.log('start');
 
     if (h === null) {
-        h = parseInt(document.getElementById('h_val').value);
+        h = h_val
         // console.log(h);
-        if (isNaN(h)) {
-            console.log(h);
-            h = 0;
+        // if (isNaN(h)) {
+        //     console.log(h);
+        //     h = 0;
 
-        }
+        // }
         
         // console.log(h);
         // h=0;
-        m = parseInt(document.getElementById('m_val').value);
-        if (isNaN(m)) {
-            console.log(m);
-            m = 0;
-        }
-        s = parseInt(document.getElementById('s_val').value);
-        if (isNaN(s)) {
-            console.log(s);
-            s = 0;
+        m = m_val-1;
+        // if (isNaN(m)) {
+        //     console.log(m);
+        //     m = 0;
+        // }
+        s = s_val;
+        // if (isNaN(s)) {
+        //     console.log(s);
+        //     s = 0;
 
-        }
+        // }
     }
     newTimee();
 
@@ -1020,13 +1253,34 @@ function stop() {
 }
 function reset() {
     clearTimeout(timeout);
-    document.querySelector('#h_val').value =" ";
-    document.querySelector('#m_val').value =" ";
-    document.querySelector('#s_val').value =" ";
+    document.getElementById('h').innerText = '00';
+    document.getElementById('m').innerText = '00';
+    document.getElementById('s').innerText = '00';
+
+    oclockHours_0.innerText='0';
+     oclockHours_1.innerText="1";
+     oclockHours_2.innerHTML='2'
+     oclockHours_3.innerHTML='3'
+     oclockHours_4.innerHTML='4'
+     oclockHours_5.innerHTML='5'
+     oclockHours_6.innerHTML='6'
+     oclockHours_7.innerHTML='7'
+     oclockHours_8.innerHTML='8'
+     oclockHours_9.innerHTML='9'
+     oclockHours_10.innerHTML='10'
+     oclockHours_11.innerHTML='11'
+    isHours=true;
+    h_val=null;
+ m_val=null;
+
     h = null;
     m = null;
     s = null;
 }
+
+//countdown-end
+
+
  var web=document.documentElement;
  var webfullscreen=false;
 
