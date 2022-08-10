@@ -163,9 +163,7 @@ input[type="checkbox"]::before {
     z-index: 2;
 }
 
-input[type="checkbox"]::before:hover {
-    cursor: pointer;
-}
+
 
 input:checked[type="checkbox"]::before {
     right: 25px;
@@ -216,6 +214,7 @@ input:checked[type="checkbox"]::before {
 
 .main .taskbar i:hover {
     color: #fff;
+    cursor: pointer;
 }
 
 .taskbar>div:not(:first-child) {
@@ -287,12 +286,14 @@ input:checked[type="checkbox"]::before {
 
 .video__item button:hover {
     opacity: 1 !important;
+    cursor: pointer;
 }
 
 #chillvibes:hover,
 #bookcafe:hover,
 #caferoom:hover {
     opacity: 1 !important;
+    cursor: pointer;
 }
 
 #chillvibes,
