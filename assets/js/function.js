@@ -39,7 +39,7 @@ taskMusic.addEventListener('click', () => {
         timeBoard.style.display = 'none';
         sreenBoard.style.display = 'none';
         soundBoard.style.display = 'none';
-        
+
     }
 });
 
@@ -55,7 +55,7 @@ taskItemsound.addEventListener('click', () => {
         musicBoard.style.display = 'none';
         timeBoard.style.display = 'none';
         sreenBoard.style.display = 'none';
-       
+
     }
 });
 
@@ -300,12 +300,12 @@ function updatescreen() {
 
 
 function caferoomchange() {
-    chillcontainer.style.display='none';
-    caferoomcontainer.style.display='block';
-    bookcafecontainer.style.display='none';
+    chillcontainer.style.display = 'none';
+    caferoomcontainer.style.display = 'block';
+    bookcafecontainer.style.display = 'none';
     Peopleaudio.pause();
 
-    
+
     CityTrafficaudio.pause();
     RainCityaudio.pause();
     KeyBoardaudio.pause();
@@ -321,9 +321,9 @@ function caferoomchange() {
 }
 
 function chillvibeschange() {
-    caferoomcontainer.style.display='none';
-    bookcafecontainer.style.display='none';
-    
+    caferoomcontainer.style.display = 'none';
+    bookcafecontainer.style.display = 'none';
+
     CityTrafficaudio.pause();
     Peopleaudio.pause();
 
@@ -336,7 +336,7 @@ function chillvibeschange() {
     dayRainny = './assets/videos/Day-rainny.mp4';
     nightRainny = './assets/videos/Night-rainny.mp4';
     updatescreen();
-    chillcontainer.style.display='block';
+    chillcontainer.style.display = 'block';
     chillvibeshl = 1;
     bookcafehl = 0;
     caferoomhl = 0;
@@ -344,8 +344,8 @@ function chillvibeschange() {
 }
 
 function bookcafechange() {
-    chillcontainer.style.display='none';
-    caferoomcontainer.style.display='none';
+    chillcontainer.style.display = 'none';
+    caferoomcontainer.style.display = 'none';
     Peopleaudio.pause();
     CityTrafficaudio.pause();
 
@@ -356,7 +356,7 @@ function bookcafechange() {
     dayRainny = './assets/videos/ExteriorRainyDay.mp4';
     nightRainny = './assets/videos/ExteriorRainyNight.mp4';
     updatescreen();
-    bookcafecontainer.style.display='block';
+    bookcafecontainer.style.display = 'block';
 
     chillvibeshl = 0;
     bookcafehl = 1;
@@ -447,19 +447,19 @@ envkeyboardcaferoom.addEventListener('mousedown', () => {
 })
 envraincitycaferoom.addEventListener('mousedown', () => {
     isReadyToDragRainCity = true;
-    
+
 })
 envpeoplecaferoom.addEventListener('mousedown', () => {
     isReadyToDragPeople = true;
-    
+
 })
 envraincitybookcafe.addEventListener('mousedown', () => {
     isReadyToDragRainCity = true;
-    
+
 })
 envcitytrafficbookcafe.addEventListener('mousedown', () => {
     isReadyToDragCityTraffic = true;
-    
+
 })
 
 
@@ -628,7 +628,7 @@ envraincitychill.addEventListener('mousemove', (evt) => {
         RainCityaudio.play();
         RainCityaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) RainCityaudio.volume =0;
+        if (percent < 0.01) RainCityaudio.volume = 0;
     }
 
 })
@@ -649,7 +649,7 @@ envraincitycaferoom.addEventListener('mousemove', (evt) => {
         RainCityaudio.play();
         RainCityaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) RainCityaudio.volume =0;
+        if (percent < 0.01) RainCityaudio.volume = 0;
     }
 
 })
@@ -672,7 +672,7 @@ envkeyboardcaferoom.addEventListener('mousemove', (evt) => {
         KeyBoardaudio.play();
         KeyBoardaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) KeyBoardaudio.volume =0;
+        if (percent < 0.01) KeyBoardaudio.volume = 0;
     }
 
 })
@@ -694,7 +694,7 @@ envpeoplecaferoom.addEventListener('mousemove', (evt) => {
         Peopleaudio.play();
         Peopleaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) Peopleaudio.volume =0;
+        if (percent < 0.01) Peopleaudio.volume = 0;
     }
 
 })
@@ -716,7 +716,7 @@ envraincitybookcafe.addEventListener('mousemove', (evt) => {
         RainCityaudio.play();
         RainCityaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) RainCityaudio.volume =0;
+        if (percent < 0.01) RainCityaudio.volume = 0;
     }
 
 })
@@ -738,7 +738,7 @@ envcitytrafficbookcafe.addEventListener('mousemove', (evt) => {
         CityTrafficaudio.play();
         CityTrafficaudio.volume = percent;
         // console.log(percent);
-        if(percent<0.01) CityTrafficaudio.volume =0;
+        if (percent < 0.01) CityTrafficaudio.volume = 0;
     }
 
 })
@@ -870,37 +870,36 @@ document.addEventListener('mouseup', () => {
 
 
 
-function signupinchange(){
-    signupBtn.addEventListener('click',function() {
-        signinCtn.style.display='none';
-        signupCtn.style.display='block';
+function signupinchange() {
+    signupBtn.addEventListener('click', function () {
+        signinCtn.style.display = 'none';
+        signupCtn.style.display = 'block';
     });
-    signinBtn.addEventListener('click',function() {
-        signupCtn.style.display='none';
-        signinCtn.style.display='block';
+    signinBtn.addEventListener('click', function () {
+        signupCtn.style.display = 'none';
+        signinCtn.style.display = 'block';
     });
 
 }
-function signupinctnchange(){
-    if(signupinCtnHidden==false)
-    {
-        signupinCtn.style.display='none';
-        signupinCtnHidden=true;
+function signupinctnchange() {
+    if (signupinCtnHidden == false) {
+        signupinCtn.style.display = 'none';
+        signupinCtnHidden = true;
 
         console.log('none');
     }
-    else{
-        signupinCtn.style.display='block';
-        signupinCtnHidden=false;
+    else {
+        signupinCtn.style.display = 'block';
+        signupinCtnHidden = false;
         console.log('block');
 
     }
 }
-logout.addEventListener('click',function(){
-    signupinCtn.style.display='block';
-    headerSignupin.style.display='block';
-    headerUsername.style.display='none';
-    logout.style.display='none'
+logout.addEventListener('click', function () {
+    signupinCtn.style.display = 'block';
+    headerSignupin.style.display = 'block';
+    headerUsername.style.display = 'none';
+    logout.style.display = 'none'
 })
 
 
@@ -929,210 +928,210 @@ logout.addEventListener('click',function(){
 
 
 
-var isHours=true;
-var h_val=null;
-var m_val=null;
-var s_val=59;
-function setTime(){
-    
-    if(m_val<10){
+var isHours = true;
+var h_val = null;
+var m_val = null;
+var s_val = 59;
+function setTime() {
 
-        document.getElementById('m').innerText ='0'+ m_val.toString();
+    if (m_val < 10) {
+
+        document.getElementById('m').innerText = '0' + m_val.toString();
     }
-    else{
+    else {
         document.getElementById('m').innerText = m_val.toString();
 
     }
     document.getElementById('s').innerText = '00';
 }
 
-    oclockHours_0.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=0
-            console.log('m_val=0');
-            setTime()
-        
-
-        }
-        if(h_val==null&&isHours==true){
-            console.log('h_val=0');
-            h_val=0
-            changeminute();
-        }
-    })
-    oclockHours_1.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=5
-            console.log('m_val=5');
-            setTime()
-
-        }
-        if(h_val==null&&isHours==true){
-            h_val=1
-            console.log('h_val=1');
-            changeminute();
-
-        }
-    })
-    oclockHours_2.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=10;
-            console.log('m_val=10');
-            setTime()
-
-        }
-        if(h_val==null&&isHours==true){
-           h_val=2;
-           console.log('h_val=2');
-           changeminute();
-
-           
+oclockHours_0.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 0
+        console.log('m_val=0');
+        setTime()
 
 
-       }
-
-    })
-    oclockHours_3.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=15
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=3
-            changeminute();
-
-       }
-    })
-    oclockHours_4.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=20
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=4
-            changeminute();
-
-       }
-
-    })
-    oclockHours_5.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=25
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=5
-            changeminute();
-
-       }
-
-    })
-    oclockHours_6.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=30
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=6
-            changeminute();
-
-       }
-
-    })
-    oclockHours_7.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=35
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=7
-            changeminute();
-
-       }
-
-    })
-    oclockHours_8.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=40
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=8
-            changeminute();
-
-       }
-
-    })
-    oclockHours_9.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=45
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=9
-            changeminute();
-
-       }
-
-    })
-    oclockHours_10.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=50
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=10
-            changeminute();
-
-       }
-
-    })
-    oclockHours_11.addEventListener('click',function(){
-        if(m_val==null&&isHours==false){
-            m_val=55
-            setTime()
-        }
-        if(h_val==null&&isHours==true){
-           h_val=11
-            changeminute();
-
-       }
-
-    })
-        
-
-
- function changeminute(){
-    if(h_val<10){
-
-        document.getElementById('h').innerText ='0'+ h_val.toString();
     }
-    else{
+    if (h_val == null && isHours == true) {
+        console.log('h_val=0');
+        h_val = 0
+        changeminute();
+    }
+})
+oclockHours_1.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 5
+        console.log('m_val=5');
+        setTime()
+
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 1
+        console.log('h_val=1');
+        changeminute();
+
+    }
+})
+oclockHours_2.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 10;
+        console.log('m_val=10');
+        setTime()
+
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 2;
+        console.log('h_val=2');
+        changeminute();
+
+
+
+
+    }
+
+})
+oclockHours_3.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 15
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 3
+        changeminute();
+
+    }
+})
+oclockHours_4.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 20
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 4
+        changeminute();
+
+    }
+
+})
+oclockHours_5.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 25
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 5
+        changeminute();
+
+    }
+
+})
+oclockHours_6.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 30
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 6
+        changeminute();
+
+    }
+
+})
+oclockHours_7.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 35
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 7
+        changeminute();
+
+    }
+
+})
+oclockHours_8.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 40
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 8
+        changeminute();
+
+    }
+
+})
+oclockHours_9.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 45
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 9
+        changeminute();
+
+    }
+
+})
+oclockHours_10.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 50
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 10
+        changeminute();
+
+    }
+
+})
+oclockHours_11.addEventListener('click', function () {
+    if (m_val == null && isHours == false) {
+        m_val = 55
+        setTime()
+    }
+    if (h_val == null && isHours == true) {
+        h_val = 11
+        changeminute();
+
+    }
+
+})
+
+
+
+function changeminute() {
+    if (h_val < 10) {
+
+        document.getElementById('h').innerText = '0' + h_val.toString();
+    }
+    else {
         document.getElementById('h').innerText == h_val.toString();
 
     }
-     console.log('hours');
-     oclockHours_0.innerText='0';
-     oclockHours_1.innerText="5";
-     oclockHours_2.innerHTML='10'
-     oclockHours_3.innerHTML='15'
-     oclockHours_4.innerHTML='20'
-     oclockHours_5.innerHTML='25'
-     oclockHours_6.innerHTML='30'
-     oclockHours_7.innerHTML='35'
-     oclockHours_8.innerHTML='40'
-     oclockHours_9.innerHTML='45'
-     oclockHours_10.innerHTML='50'
-     oclockHours_11.innerHTML='55'
-     isHours=false;
+    console.log('hours');
+    oclockHours_0.innerText = '0';
+    oclockHours_1.innerText = "5";
+    oclockHours_2.innerHTML = '10'
+    oclockHours_3.innerHTML = '15'
+    oclockHours_4.innerHTML = '20'
+    oclockHours_5.innerHTML = '25'
+    oclockHours_6.innerHTML = '30'
+    oclockHours_7.innerHTML = '35'
+    oclockHours_8.innerHTML = '40'
+    oclockHours_9.innerHTML = '45'
+    oclockHours_10.innerHTML = '50'
+    oclockHours_11.innerHTML = '55'
+    isHours = false;
 
- }
+}
 
-       
 
-        
 
-    
+
+
+
 
 
 
@@ -1166,14 +1165,14 @@ function newTimee() {
         Windaudio.pause();
         audio.pause();
         playBtn.src = "./assets/img/play.png";
-        timeUp.style.display='block';
-            setTimeout(function(){
-            timeUp.style.display='none';
+        timeUp.style.display = 'block';
+        setTimeout(function () {
+            timeUp.style.display = 'none';
 
-            },1000)
-    h = null;
-    m = null;
-    s = null;
+        }, 1000)
+        h = null;
+        m = null;
+        s = null;
         return;
     }
 
@@ -1181,27 +1180,27 @@ function newTimee() {
     // document.getElementById('h').innerText = h.toString();
     // document.getElementById('m').innerText = m.toString();
     // document.getElementById('s').innerText = s.toString();
-    if(h<10){
+    if (h < 10) {
 
-        document.getElementById('h').innerText ='0'+ h.toString();
+        document.getElementById('h').innerText = '0' + h.toString();
     }
-    else{
+    else {
         document.getElementById('h').innerText == h.toString();
 
     }
-    if(m<10){
+    if (m < 10) {
 
-        document.getElementById('m').innerText ='0'+ m.toString();
+        document.getElementById('m').innerText = '0' + m.toString();
     }
-    else{
+    else {
         document.getElementById('m').innerText = m.toString();
 
     }
-    if(s<10){
+    if (s < 10) {
 
-        document.getElementById('s').innerText ='0'+ s.toString();
+        document.getElementById('s').innerText = '0' + s.toString();
     }
-    else{
+    else {
         document.getElementById('s').innerText = s.toString();
 
     }
@@ -1213,11 +1212,11 @@ function newTimee() {
 }
 
 function start() {
-    startCd.style.display='block';
-            setTimeout(function(){
-            startCd.style.display='none';
+    startCd.style.display = 'block';
+    setTimeout(function () {
+        startCd.style.display = 'none';
 
-            },1000)
+    }, 1000)
     console.log('start');
 
     if (h === null) {
@@ -1228,10 +1227,10 @@ function start() {
         //     h = 0;
 
         // }
-        
+
         // console.log(h);
         // h=0;
-        m = m_val-1;
+        m = m_val - 1;
         // if (isNaN(m)) {
         //     console.log(m);
         //     m = 0;
@@ -1257,21 +1256,21 @@ function reset() {
     document.getElementById('m').innerText = '00';
     document.getElementById('s').innerText = '00';
 
-    oclockHours_0.innerText='0';
-     oclockHours_1.innerText="1";
-     oclockHours_2.innerHTML='2'
-     oclockHours_3.innerHTML='3'
-     oclockHours_4.innerHTML='4'
-     oclockHours_5.innerHTML='5'
-     oclockHours_6.innerHTML='6'
-     oclockHours_7.innerHTML='7'
-     oclockHours_8.innerHTML='8'
-     oclockHours_9.innerHTML='9'
-     oclockHours_10.innerHTML='10'
-     oclockHours_11.innerHTML='11'
-    isHours=true;
-    h_val=null;
- m_val=null;
+    oclockHours_0.innerText = '0';
+    oclockHours_1.innerText = "1";
+    oclockHours_2.innerHTML = '2'
+    oclockHours_3.innerHTML = '3'
+    oclockHours_4.innerHTML = '4'
+    oclockHours_5.innerHTML = '5'
+    oclockHours_6.innerHTML = '6'
+    oclockHours_7.innerHTML = '7'
+    oclockHours_8.innerHTML = '8'
+    oclockHours_9.innerHTML = '9'
+    oclockHours_10.innerHTML = '10'
+    oclockHours_11.innerHTML = '11'
+    isHours = true;
+    h_val = null;
+    m_val = null;
 
     h = null;
     m = null;
@@ -1281,34 +1280,36 @@ function reset() {
 //countdown-end
 
 
- var web=document.documentElement;
- var webfullscreen=false;
+var web = document.documentElement;
+var webfullscreen = false;
 
- fullscreen.addEventListener('click', function(){
-    if (webfullscreen==true) {
-         document.exitFullscreen();
-        fullscreenicon.classList.add('fa-expand');
-        fullscreenicon.classList.remove('fa-compress');
-        webfullscreen=false;
-      } 
-    if (webfullscreen==false) {
-        web.requestFullscreen();
-        fullscreenicon.classList.remove('fa-expand');
-        fullscreenicon.classList.add('fa-compress');
-        webfullscreen=true;
-      } 
-    
-    
-  
+fullscreen.addEventListener('click', function () {
      
-    })
+    if (webfullscreen === true) {
+        document.exitFullscreen();
+        
+
+        fullscreenicon.classList.add('fa-expand');
+        fullscreenicon.classList.remove("fa-compress");
+        webfullscreen = false;
+    }
+    else if (webfullscreen === false) {
+        web.requestFullscreen();
+
+        fullscreenicon.classList.add('fa-compress');
+        fullscreenicon.classList.remove('fa-expand');
+        webfullscreen = true;
+    }
+
+})
 
 
 
 
 
-    //jscountdown
-    
+
+
+
 
 
 
