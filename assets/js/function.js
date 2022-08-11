@@ -1169,6 +1169,17 @@ function newTimee() {
         Wavesaudio.pause();
         Windaudio.pause();
         audio.pause();
+        audiocomethru.pause();
+        audiothanhxuan.pause();
+        audiokissmemore.pause();
+        audiobacktohometown.pause();
+        audiodungbamvaonghe.pause();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        audiothichemhoinhieu.pause();
+        audiodaloyeuemnhieu.pause();
+        audiocoem.pause();
+        audioatmyworst.pause();
         playBtn.src = "./assets/img/play.png";
         timeUp.style.display = 'block';
         setTimeout(function () {
