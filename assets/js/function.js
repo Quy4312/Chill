@@ -369,7 +369,7 @@ function loadSong() {
         currentindex += 1;
         console.log(songs[currentindex].path);
         audio.src = songs[currentindex].path;
-        namesong.textContent = songs[currentindex].name;
+        namesong.textContent ='Name Song : '+ songs[currentindex].name;
         if (isPlaying == true) {
             audio.play();
         }
@@ -381,7 +381,7 @@ function loadSong() {
     backBtn.addEventListener('click', function () {
         currentindex -= 1;
         audio.src = songs[currentindex].path;
-        namesong.textContent = songs[currentindex].name;
+        namesong.textContent ='Name Song : '+ songs[currentindex].name;
         if (isPlaying == true) {
             audio.play();
         }
@@ -392,11 +392,15 @@ function loadSong() {
 }
 loadSong();
 
-function renderclear() {
-    setTimeout(function () {
-        render.removeAttribute('src');
-    }, 5000);
-}
+
+    // playMusic();
+
+
+// function renderclear() {
+//     setTimeout(function () {
+//         render.removeAttribute('src');
+//     }, 5000);
+// }
 playBtn.addEventListener('click', function () {
     if (isPlaying === false) {
         console.log('play...');
@@ -864,6 +868,7 @@ document.addEventListener('mouseup', () => {
     isReadyToDragRiver = false;
     isReadyToDragWaves = false;
     isReadyToDragWind = false;
+    isReadyToDragMusic=false;
 
 })
 
@@ -1303,7 +1308,590 @@ fullscreen.addEventListener('click', function () {
 
 })
 
+playcomethruBtn.addEventListener('click',function(){
+    if(comethruPlaying==false)
+    {
+        
+        playcomethruBtn.classList.remove('fa-circle-play')
+        playcomethruBtn.classList.add('fa-circle-pause')
+        audiocomethru.play();
+        audiothanhxuan.pause();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        audiothichemhoinhieu.pause();
+        audiodaloyeuemnhieu.pause();
+        audiocoem.pause();
+        audioatmyworst.pause();
+        
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+       
+        comethruPlaying=true
+                          
 
+
+    }
+    else{
+        playcomethruBtn.classList.add('fa-circle-play')
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        audiocomethru.pause();
+
+        comethruPlaying=false
+    }
+
+})
+playatmyworstBtn.addEventListener('click',function(){
+    if(atmyworstPlaying==false)
+    {
+        
+        playatmyworstBtn.classList.remove('fa-circle-play')
+        playatmyworstBtn.classList.add('fa-circle-pause')
+        audioatmyworst.play();
+        audiodaloyeuemnhieu.pause();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        } 
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        } 
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }               
+
+        audiothanhxuan.pause();
+
+        audiothichemhoinhieu.pause();
+
+
+        audiocoem.pause();
+
+        audiocomethru.pause();
+        atmyworstPlaying=true
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+       
+
+
+    }
+    else{
+        playatmyworstBtn.classList.add('fa-circle-play')
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        audioatmyworst.pause();
+
+        atmyworstPlaying=false
+    }
+
+})
+playcoemBtn.addEventListener('click',function(){
+    if(coemPlaying==false)
+    {
+        
+        playcoemBtn.classList.remove('fa-circle-play')
+        playcoemBtn.classList.add('fa-circle-pause')
+        audiocoem.play();
+        audiodaloyeuemnhieu.pause();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        audiothanhxuan.pause();
+        audiothichemhoinhieu.pause();
+        audiocomethru.pause();
+        audioatmyworst.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+        
+        coemPlaying=true
+
+
+    }
+    else{
+        playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        audiocoem.pause();
+
+        coemPlaying=false
+    }
+
+})
+playtheoceanBtn.addEventListener('click',function(){
+    if(theoceanPlaying==false)
+    {
+        
+        playtheoceanBtn.classList.remove('fa-circle-play')
+        playtheoceanBtn.classList.add('fa-circle-pause')
+        audiotheocean.play();
+        audiothichemhoinhieu.pause();
+        audiodeathbed.pause();
+        audiothanhxuan.pause();
+        audiocoem.pause();
+
+
+
+        audiodaloyeuemnhieu.pause();
+        audioatmyworst.pause();
+
+
+        audiocomethru.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+       
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+        theoceanPlaying=true
+
+
+    }
+    else{
+        playtheoceanBtn.classList.add('fa-circle-play')
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        audiotheocean.pause();
+
+        theoceanPlaying=false
+    }
+
+})
+playdeathbedBtn.addEventListener('click',function(){
+    if(deathbedPlaying==false)
+    {
+        
+        playdeathbedBtn.classList.remove('fa-circle-play')
+        playdeathbedBtn.classList.add('fa-circle-pause')
+        audiodeathbed.play();
+        audiothanhxuan.pause();
+        audiothichemhoinhieu.pause();
+        audiotheocean.pause();
+        audioatmyworst.pause();
+        audiocoem.pause();
+        audiodaloyeuemnhieu.pause();
+        audiocomethru.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+        
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        
+        deathbedPlaying=true
+
+
+    }
+    else{
+        playdeathbedBtn.classList.add('fa-circle-play')
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        audiodeathbed.pause();
+
+        deathbedPlaying=false
+    }
+
+})
+playthanhxuanBtn.addEventListener('click',function(){
+    if(thanhxuanPlaying==false)
+    {
+        
+        playthanhxuanBtn.classList.remove('fa-circle-play')
+        playthanhxuanBtn.classList.add('fa-circle-pause')
+        audiothanhxuan.play();
+        audioatmyworst.pause();
+        audiodeathbed.pause();
+
+        audiotheocean.pause();
+        audiocoem.pause();
+
+
+
+        audiothichemhoinhieu.pause();
+
+        audiodaloyeuemnhieu.pause();
+
+        audiocomethru.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+         if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        thanhxuanPlaying=true
+
+
+    }
+    else{
+        playthanhxuanBtn.classList.add('fa-circle-play')
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        audiothanhxuan.pause();
+
+        thanhxuanPlaying=false
+    }
+
+})
+playthichemhoinhieuBtn.addEventListener('click',function(){
+    if(thichemhoinhieuPlaying==false)
+    {
+        
+        playthichemhoinhieuBtn.classList.remove('fa-circle-play')
+        playthichemhoinhieuBtn.classList.add('fa-circle-pause')
+        audiothichemhoinhieu.play();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        audiocoem.pause();
+
+
+        audiothanhxuan.pause();
+
+        audioatmyworst.pause();
+
+        audiodaloyeuemnhieu.pause();
+
+        audiocomethru.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+        
+        if(playdaloyeuemnhieuBtn.classList.contains('fa-circle-pause')) {
+            playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+            daloyeuemnhieuPlaying=false;
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        }
+        thichemhoinhieuPlaying=true
+
+
+    }
+    else{
+        playthichemhoinhieuBtn.classList.add('fa-circle-play')
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        audiothichemhoinhieu.pause();
+
+        thichemhoinhieuPlaying=false
+    }
+
+})
+playdaloyeuemnhieuBtn.addEventListener('click',function(){
+    if(daloyeuemnhieuPlaying==false)
+    {
+        
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-play')
+        playdaloyeuemnhieuBtn.classList.add('fa-circle-pause')
+        audiodaloyeuemnhieu.play();
+        audiodeathbed.pause();
+        audiotheocean.pause();
+        audiocoem.pause();
+
+
+        audiothanhxuan.pause();
+
+        audioatmyworst.pause();
+
+        audiothichemhoinhieu.pause();
+
+        audiocomethru.pause();
+        if(playcomethruBtn.classList.contains('fa-circle-pause')) {
+            playcomethruBtn.classList.add('fa-circle-play')
+            comethruPlaying=false;
+        playcomethruBtn.classList.remove('fa-circle-pause')
+        }
+        if(playatmyworstBtn.classList.contains('fa-circle-pause')) {
+            playatmyworstBtn.classList.add('fa-circle-play')
+            atmyworstPlaying=false;
+        playatmyworstBtn.classList.remove('fa-circle-pause')
+        }
+        if(playcoemBtn.classList.contains('fa-circle-pause')) {
+        coemPlaying=false;
+            playcoemBtn.classList.add('fa-circle-play')
+        playcoemBtn.classList.remove('fa-circle-pause')
+        }
+        if(playtheoceanBtn.classList.contains('fa-circle-pause')) {
+            playtheoceanBtn.classList.add('fa-circle-play')
+            theoceanPlaying=false;
+        playtheoceanBtn.classList.remove('fa-circle-pause')
+        }
+         if(playdeathbedBtn.classList.contains('fa-circle-pause')) {
+            playdeathbedBtn.classList.add('fa-circle-play')
+            deathbedPlaying=false;
+        playdeathbedBtn.classList.remove('fa-circle-pause')
+        }
+        if(playthanhxuanBtn.classList.contains('fa-circle-pause')) {
+            playthanhxuanBtn.classList.add('fa-circle-play')
+            thanhxuanPlaying=false;
+        playthanhxuanBtn.classList.remove('fa-circle-pause')
+        }
+        if(playthichemhoinhieuBtn.classList.contains('fa-circle-pause')) {
+            playthichemhoinhieuBtn.classList.add('fa-circle-play')
+            thichemhoinhieuPlaying=false;
+        playthichemhoinhieuBtn.classList.remove('fa-circle-pause')
+        }
+        daloyeuemnhieuPlaying=true
+
+
+    }
+    else{
+        playdaloyeuemnhieuBtn.classList.add('fa-circle-play')
+        playdaloyeuemnhieuBtn.classList.remove('fa-circle-pause')
+        audiodaloyeuemnhieu.pause();
+        daloyeuemnhieuPlaying=false
+    }
+
+})
+
+musicVolumeCtn.addEventListener('mousedown',function(){
+    isReadyToDragMusic=true;
+    console.log('isReadyToDragMusic=true;');
+})
+document.addEventListener('mousemove', (evt) => {
+    const clientX = evt.clientX;
+    // console.log(clientX);
+    const left = musicVolumeCtn.getBoundingClientRect().left
+    const width = musicVolumeCtn.getBoundingClientRect().width
+    // console.log(left,width);
+
+    const min = left
+    const max = musicVolumeCtn.getBoundingClientRect().width + left
+    if (isReadyToDragMusic==true&& clientX >= min && clientX <= max) {
+        const percent = (clientX - left) / width
+        // console.log('mousemove');
+
+        // console.log(percent);
+
+        musicVolume.style.width = (percent * 100) + '%';
+        musicCircle.style.left = percent * 100 + '%';
+        if(comethruPlaying==true){
+            audiocomethru.volume=percent;
+        }
+        else if(atmyworstPlaying==true){
+            audioatmyworst.volume=percent;
+        }
+        else if(coemPlaying==true){
+            audiocoem.volume=percent;
+        }
+        else if(theoceanPlaying==true){
+            audiotheocean.volume=percent;
+        }
+        else if(deathbedPlaying==true){
+            audiodeathbed.volume=percent;
+        }
+        else if(thanhxuanPlaying==true){
+            audiothanhxuan.volume=percent;
+        }
+        else if(thichemhoinhieuPlaying==true){
+            audiothichemhoinhieu.volume=percent;
+        }
+        else if(daloyeuemnhieuPlaying==true){
+            audiodaloyeuemnhieu.volume=percent;
+        }
+
+        
+
+
+    }
+
+})
 
 
 

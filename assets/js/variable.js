@@ -171,7 +171,36 @@ const headerSignupin=document.querySelector('.js-header__signupin');
 const logout=document.querySelector('.js-logout');
 const headerUsername=document.querySelector('.header__username');
 const headerUsernameText=document.querySelector('#header__username-text');
+var comethruPlaying=false;
+var atmyworstPlaying=false;
+var coemPlaying=false;
+var theoceanPlaying=false;
+var deathbedPlaying=false;
+var thanhxuanPlaying=false;
+var thichemhoinhieuPlaying=false;
+var daloyeuemnhieuPlaying=false;
+const playcomethruBtn=document.querySelector('#comethru')
+const playatmyworstBtn=document.querySelector('#atmyworst')
+const playcoemBtn=document.querySelector('#coem')
+const playtheoceanBtn=document.querySelector('#theocean')
+const playdeathbedBtn=document.querySelector('#deathbed')
+const playthanhxuanBtn=document.querySelector('#thanhxuan')
+const playthichemhoinhieuBtn=document.querySelector('#thichemhoinhieu')
+const playdaloyeuemnhieuBtn=document.querySelector('#daloyeuemnhieu')
 
+
+const audiocomethru=document.querySelector('#audiocomethru')
+const audioatmyworst=document.querySelector('#audioatmyworst')
+const audiocoem=document.querySelector('#audiocoem')
+const audiotheocean=document.querySelector('#audiotheocean')
+const audiodeathbed=document.querySelector('#audiodeathbed')
+const audiothanhxuan=document.querySelector('#audiothanhxuan')
+const audiothichemhoinhieu=document.querySelector('#audiothichemhoinhieu')
+const audiodaloyeuemnhieu=document.querySelector('#audiodaloyeuemnhieu')
+const musicVolumeCtn=document.querySelector('.music-volume--item')
+const musicVolume=document.querySelector('.music__volum')
+const musicCircle=document.querySelector('.music__circle')
+var isReadyToDragMusic=false;
 
 
 
@@ -242,6 +271,9 @@ var currentindex=0;
         path:'./assets/music_lofi/sleepy4.mp3',
         },
     ]
+    
+
+  
 
     
     

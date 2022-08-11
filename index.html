@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style.scss">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
@@ -327,20 +330,76 @@
             <div class="taskbar__item music-container">
                 <i class="fa-solid fa-music"></i>
                 <div class="music-list-board">
+                    <div class="music-board--text"><i class="fa-solid fa-music"></i>Song Playlist</div>
+                    <div class="music-volume--ctn">
+                        <div class="music-volume--item">
+                            <i class="fa-solid fa-volume-low" id="volumelow1" ></i>
+                            <div class="music__volum"></div>
+                            <div class="music__circle"></div>
+                            <i class="fa-solid fa-volume-high" id="volumehight1" ></i>
+                        </div>
+            <!-- <audio id="musicsrc" loop="" preload="auto" src="./assets/orther-music--mp3/JeremyZucker-comethru.mp3"></audio> -->
 
-                    <!-- <iframe class="video-youtube" width="400" height="225" src="https://www.youtube.com/embed/ZW97HtKICHo?start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                    <div class="video-ctn">
-                        <input type="text" class="search-video">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+
                     </div>
-                    <div class="video-youtubectn">
-                        <!-- <video loop="" autoplay="" muted src="https://www.youtube.com/watch?v=Qi2QnHss86Y&list=PL_xAb68hDPpR3pgQiwc6A29eRo9-zP8rE&index=3"></video> -->
-                        <video width="320" height="240" controls>
-                            <source
-                                src="https://www.youtube.com/watch?v=274GdLSXCiw&list=PL_xAb68hDPpR3pgQiwc6A29eRo9-zP8rE&index=2">
-                        </video>
-                        <!-- <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="kidsai - GIAYPHUT (Official Audio)" width="100%" height="100%" src="https://www.youtube.com/embed/null?autoplay=0&amp;mute=0&amp;controls=1&amp;playsinline=1&amp;listType=playlist&amp;list=RDlwZ6mRpD62o&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;widgetid=5" id="widget6"></iframe> -->
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="comethru" ></i>
+                        <div class="music-name">Come Thru</div>
+                        <div class="music-singer">Jeremy Zucker</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/JeremyZucker-comethru.mp3" id="audiocomethru"></audio>
                     </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="atmyworst" ></i>
+                        <div class="music-name">At My Worst</div>
+                        <div class="music-singer">PinkSweat</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/PinkSweat-AtMyWorst.mp3" id="audioatmyworst"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="coem"></i>
+                        <div class="music-name">Có Em</div>
+                        <div class="music-singer">LowG</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/LowG-Coem.mp3" id="audiocoem"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="theocean"></i>
+                        <div class="music-name">Astronauln The Ocean</div>
+                        <div class="music-singer">Masked Wolf</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/AstronautInTheOcean-MaskedWolf.mp3" id="audiotheocean"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="deathbed"></i>
+                        <div class="music-name">Death Bed</div>
+                        <div class="music-singer">Powfu</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/Death-Bed-powfu.mp3" id="audiodeathbed"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="thanhxuan"></i>
+                        <div class="music-name">Thanh Xuân</div>
+                        <div class="music-singer">DaLAB</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/ThanhXuan-DaLAB.mp3" id="audiothanhxuan"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="thichemhoinhieu"></i>
+                        <div class="music-name">Thích Em Hơi Nhiều</div>
+                        <div class="music-singer">Wrenevans</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/WRENEVANS-ThichEmHoiNhieu.mp3" id="audiothichemhoinhieu"></audio>
+
+                    </div>
+                    <div class="music-item">
+                        <i class="fa-solid fa-circle-play" id="daloyeuemnhieu"></i>
+                        <div class="music-name">Đã Lỡ Yêu Em Nhiều</div>
+                        <div class="music-singer">Justatee</div>
+                        <audio loop="" preload="auto" src="./assets/orther-music--mp3/JustaTee-DaLoYeuEmNhieu.mp3" id="audiodaloyeuemnhieu"></audio>
+
+                    </div>
+
+
+                  
 
 
                 </div>
@@ -415,7 +474,7 @@
 
         <div class="bottombar-container">
             <div class="bottombar">
-                <div class="namesong">Chill1</div>
+                <div class="namesong">Name Song :Chill1</div>
                 <div class="bottom__nav">
                     <img src="./assets/img/back.png" id="back" alt="">
                     <img src="./assets/img/play.png" id="play" alt="">
