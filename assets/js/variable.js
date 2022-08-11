@@ -179,6 +179,9 @@ var deathbedPlaying=false;
 var thanhxuanPlaying=false;
 var thichemhoinhieuPlaying=false;
 var daloyeuemnhieuPlaying=false;
+var kissmemorePlaying=false;
+var backtohometownPlaying=false;
+var dungbamvaonghePlaying=false;
 const playcomethruBtn=document.querySelector('#comethru')
 const playatmyworstBtn=document.querySelector('#atmyworst')
 const playcoemBtn=document.querySelector('#coem')
@@ -187,6 +190,9 @@ const playdeathbedBtn=document.querySelector('#deathbed')
 const playthanhxuanBtn=document.querySelector('#thanhxuan')
 const playthichemhoinhieuBtn=document.querySelector('#thichemhoinhieu')
 const playdaloyeuemnhieuBtn=document.querySelector('#daloyeuemnhieu')
+const playkissmemoreBtn=document.querySelector('#kissmemore')
+const playbacktohometownBtn=document.querySelector('#backtohometown')
+const playdungbamvaongheBtn=document.querySelector('#dungbamvaonghe')
 
 
 const audiocomethru=document.querySelector('#audiocomethru')
@@ -197,6 +203,15 @@ const audiodeathbed=document.querySelector('#audiodeathbed')
 const audiothanhxuan=document.querySelector('#audiothanhxuan')
 const audiothichemhoinhieu=document.querySelector('#audiothichemhoinhieu')
 const audiodaloyeuemnhieu=document.querySelector('#audiodaloyeuemnhieu')
+const audiokissmemore=document.querySelector('#audiokissmemore')
+const audiobacktohometown=document.querySelector('#audiobacktohometown')
+const audiodungbamvaonghe=document.querySelector('#audiodungbamvaonghe')
+
+
+
+
+
+
 const musicVolumeCtn=document.querySelector('.music-volume--item')
 const musicVolume=document.querySelector('.music__volum')
 const musicCircle=document.querySelector('.music__circle')
